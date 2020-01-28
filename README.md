@@ -44,3 +44,6 @@ Q: Why are there 2 `Dockerfile`s?
 
 A: The `.devcontainer\Dockerfile` is for your development environment.  The `Dockerfile` in the root directory is to build your Add-on.
 
+Q: I added `.devcontainer` to my `.dockerignore` and now things are broken.
+
+A: Don't.  The `.dockerignore` is shared by both Dockerfiles, and by adding `.devcontainer` to your `.dockerignore`, you will break things in the devcontainer.  Instead, use other means to avoid copying `.devcontainer` (and `.vscode` for that matter) in your "production" `Dockerfile`.

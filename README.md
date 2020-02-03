@@ -47,3 +47,7 @@ A: The `.devcontainer\Dockerfile` is for your development environment.  The `Doc
 Q: I added `.devcontainer` to my `.dockerignore` and now things are broken.
 
 A: Don't.  The `.dockerignore` is shared by both Dockerfiles, and by adding `.devcontainer` to your `.dockerignore`, you will break things in the devcontainer.  Instead, use other means to avoid copying `.devcontainer` (and `.vscode` for that matter) in your "production" `Dockerfile`.
+
+Q: When installing my local add-on, I'm not seeing my latest changes.  Instead, I see the functionality of the last published version of my add-on.
+
+A: Make sure that you remove the `image` key from your `config.json`, else when "installing" the add-on, it will try to use the docker image, rather than building the add-on locally.

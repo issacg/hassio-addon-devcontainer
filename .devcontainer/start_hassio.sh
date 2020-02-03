@@ -89,15 +89,15 @@ function run_supervisor() {
 case "$1" in
     "--cleanup")
         echo "Cleaning up old environment"
-        cleanup_docker
-        cleanup_hass_data
+        cleanup_docker || true
+        cleanup_hass_data || true
         exit 0;;
     *)
         echo "Creating development Hass.io environment"
         start_docker
         trap "stop_docker" ERR
         install
-        cleanup_docker
+        cleanup_docker || true
         run_supervisor
         stop_docker;; 
 esac

@@ -12,7 +12,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Use the mirror protocol for a fast mirror
 RUN sed -i -e 's/http:\/\/archive\.ubuntu\.com\/ubuntu\//mirror:\/\/mirrors\.ubuntu\.com\/mirrors\.txt/' /etc/apt/sources.list
 
-# Install docker
+# Install docker, jq, socat
 # https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/
 RUN apt-get update && apt-get install -y --no-install-recommends \
         apt-transport-https \
@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         software-properties-common \
         gpg-agent \
         git \
+        jq \
+        socat \
         sudo \
     && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
     && add-apt-repository "deb https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \

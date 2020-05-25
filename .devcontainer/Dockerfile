@@ -34,6 +34,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # This is a development container.  Don't bother to clean up apt cache, this way we have it handy later
 
 COPY .devcontainer/start_hassio.sh /usr/local/bin/start_hassio.sh
+RUN chmod a+x /usr/local/bin/start_hassio.sh
 
 # Install dependencies for the add-on development below.  For example, if you're running Node.js,
 # you may want something like the following...

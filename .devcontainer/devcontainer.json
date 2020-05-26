@@ -17,13 +17,17 @@
 	"workspaceFolder": "/workspaces/test_hassio/addons/local/myaddon",
 	"mounts": [
 		// Cache docker images between devcontainer rebuilds (and share between devcontainers)
-		"source=vsc-hassio-docker,target=/var/lib/docker,type=volume"
-	]
+		"source=vsc-hassio-docker,target=/var/lib/docker,type=volume",
+		// Persistant Home Assistant configuration
+		"source=${localWorkspaceFolder}/.devcontainer/data,target=/workspaces/test_hassio/homeassistant,type=bind,consistency=cached"
+	],
 
 	// Post-create command to initialize the workspace.  For example, for a node.js add-on you may want:
 	// "postCreateCommand": "cd /workspaces/test_hassio/addons/local/myaddon && npm install",
-	// "extensions": [
-	//	"dbaeumer.vscode-eslint",
-	// 	"maty.vscode-mocha-sidebar"
-	// ]
+	"extensions": [
+		// Config helper for Home Assistant
+		"keesschollaart.vscode-home-assistant"
+		// "dbaeumer.vscode-eslint",
+		// "maty.vscode-mocha-sidebar"
+	]
 }

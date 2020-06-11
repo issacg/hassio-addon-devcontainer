@@ -18,7 +18,7 @@ The following tasks are included for your convenience.
 
 This task will download and run a Home Assistant environment inside the container using the latest `dev` targets of Home Assistant and Home Assistant Core. It will be mapped to port 8123 (by default) on the host machine.
 
-- Run Home Assistant CLI - _Requires a running HOme Assistant instance_
+- Run Home Assistant CLI - _Requires a running Home Assistant instance_
 
 This task will open a [Home Assistant CLI](https://github.com/home-assistant/cli) window inside VS Code.
 

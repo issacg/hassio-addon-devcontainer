@@ -2,7 +2,7 @@
 
 ### Summary
 
-This is a templated to ease development of Home Assistant add-ons inside of a VS Code [devcontainer](https://code.visualstudio.com/docs/remote/containers)
+This is a templated to ease development of Home Assistant add-ons inside of a VS Code [devcontainer](https://code.visualstudio.com/docs/remote/containers).
 
 ### Usage 
 
@@ -42,7 +42,7 @@ A: See [this issue](https://github.com/issacg/hassio-addon-devcontainer/issues/1
 
 Q: Why are there 2 `Dockerfile`s?  
 
-A: The `.devcontainer\Dockerfile` is for your development environment.  The `Dockerfile` in the root directory is to build your add-on.
+A: The `.devcontainer\Dockerfile` is for your development environment. The `Dockerfile` in the root directory is to build your add-on.
 
 Q: I added `.devcontainer` to my `.dockerignore` and now things are broken.
 

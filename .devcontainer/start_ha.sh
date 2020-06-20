@@ -9,7 +9,7 @@ function start_docker() {
     local starttime
     local endtime
 
-    echo "Starting docker."
+    echo "Starting docker..."
     dockerd 2> /dev/null &
     DOCKER_PID=$!
 
@@ -93,7 +93,7 @@ case "$1" in
         cleanup_hass_data || true
         exit 0;;
     *)
-        echo "Creating development Hass.io environment"
+        echo "Creating development Home Assistant environment"
         start_docker
         trap "stop_docker" ERR
         install

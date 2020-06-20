@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json 
 // TODO: When https://github.com/microsoft/vscode-remote-release/issues/2129 is fixed, move to ${localWorkspaceFolderBasename}\
 {
-	"name": "Hass.io Add-On",
+	"name": "Home Assistant Add-On",
 	"context": "..",
 	"dockerFile": "Dockerfile",
 	"appPort": 8123,

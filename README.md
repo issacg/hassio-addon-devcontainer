@@ -4,7 +4,7 @@
 
 This is a templated to ease development of Home Assistant add-ons inside of a VS Code [devcontainer](https://code.visualstudio.com/docs/remote/containers).
 
-### Usage 
+### Usage
 
 Simply copy the contents of this repository to the base directory of the add-on you are developing. Modify the files in the directory as needed.  
 

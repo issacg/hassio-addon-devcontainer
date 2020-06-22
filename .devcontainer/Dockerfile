@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         containerd.io
 # This is a development container.  Don't bother to clean up apt cache, this way we have it handy later
 
-COPY .devcontainer/start_hassio.sh /usr/local/bin/start_hassio.sh
+COPY .devcontainer/start_ha.sh /usr/local/bin/start_ha.sh
 
 # Install dependencies for the add-on development below.  For example, if you're running Node.js,
 # you may want something like the following...
